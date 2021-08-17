@@ -12,7 +12,8 @@ export const register = {
       const password = bcrypt.hashSync(req.body.password, 10);
 
       const user = new UserModel({
-        username: sanitize(req.body.username),
+        firstname: sanitize(req.body.firstname),
+        lastname: sanitize(req.body.lastname),
         email: sanitize(req.body.email),
         password: password,
       });

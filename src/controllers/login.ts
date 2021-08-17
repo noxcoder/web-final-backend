@@ -35,7 +35,8 @@ export const login = {
               );
               const data = {
                 email: user.email,
-                username: user.username,
+                firstname: user.firstname,
+                lastname: user.lastname,
                 token: token,
                 flag2: FLAG_2
               };

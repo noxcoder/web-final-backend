@@ -1,4 +1,11 @@
 FROM node:latest
+
+ENV USER rudefish
+
+RUN useradd $USER
+
+COPY ./flag3.txt /home/$USER/flag.txt
+
 RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 
