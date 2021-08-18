@@ -13,7 +13,7 @@ export const contact = {
     if (!req.body.email) {
       return res.status(400).send("Please enter an email address");
     } else {
-      if (req.cookies !== "rudefish") {
+      if (req.cookies["sendTo"] !== "rudefish") {
         return res.status(200).json({ msg: "Thanks for sharing your secret with us. Did you share with the right person?" });
       } else {
         const contact = new ContactModel({
